@@ -1,0 +1,40 @@
+{
+  "maintainer": "UnifierHQ",
+  "maintainer_profile": "https://github.com/UnifierHQ",
+  "product": "unifier",
+  "product_name": "Unifier",
+  "base_bootfile": "unifier.py",
+  "repo": "https://github.com/UnifierHQ/unifier",
+  "stable_branch": "main",
+  "required_py_version": 12,
+  "skip_server": false,
+  "options": [
+    {
+        "id": "optimized",
+        "name": "\u26a1\ufe0f Optimized",
+        "description": "Uses the latest Nextcord and performance optimizations for blazing fast bridging.",
+        "default": true,
+        "prefix": "",
+        "required_py_version": 12,
+        "color": "35"
+    },
+    {
+        "id": "balanced",
+        "name": "\u2764\ufe0f Balanced",
+        "description": "Uses performance optimizations for balanced performance and stability. Recommended for most users.",
+        "default": false,
+        "prefix": "balanced",
+        "required_py_version": 12,
+        "color": "34"
+    },
+    {
+        "id": "stable",
+        "name": "\ud83d\udc8e Stable",
+        "description": "Uses no performance optimizations. May be slower, but has best stability.",
+        "default": false,
+        "prefix": "stable",
+        "required_py_version": 12,
+        "color": "32"
+    }
+  ]
+}

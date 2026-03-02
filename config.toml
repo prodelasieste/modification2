@@ -1,0 +1,85 @@
+# Unifier config TOML
+
+[system]
+debug = false
+package = "unifier"
+language = "english"
+skip_status_check = false
+encrypted_env_salt = 10 # change this to whatever you want, as long as the bot doesn't crash
+plugin_priority = true # set this to false if you want to load cogs instead of modifiers with the same name
+experiments = [] # https://wiki.unifierhq.org/guides/system/experiments
+
+[roles]
+owner = -1
+other_owners = [] # NOTE: Unless you need multiple people to manage your Unifier instance, we recommend leaving this empty.
+admin_ids = []
+
+[roles.owner_external]
+# For each platform, you can add your account's ID here.
+revolt = ""
+guilded = ""
+
+[bot]
+prefix = "u!"
+ping = 0
+main_color = "ed4545"
+custom_slogan = ""
+
+[backups]
+compress_cache = true
+crash_on_corrupted_data = true
+cache_backup_limit = 100000 # number of messages to cache
+encrypted_backups = true # enables encryption for local backups (cloud backups are always encrypted)
+zstd_level = 1 # compression level, -7 (best performance) - 22 (best compression). 1 is recommended.
+zstd_chunk_size = 4194304 # chunk size in bytes. default is 4MB (4 * 1024 * 1024).
+zstd_threads = -1 # thread count, -1 (auto) or 1+ (manual thread count). -1 is recommended.
+periodic_backup = 0
+periodic_backup_cloud = 0
+cloud_backup_endpoint = ""
+cloud_backup_salt = 12
+
+[plugin]
+branch = "main"
+repo = "https://github.com/UnifierHQ/unifier"
+check_endpoint = "https://github.com/UnifierHQ/unifier-version.git"
+files_endpoint = "https://github.com/UnifierHQ"
+
+[moderation]
+enable_logging = false
+enable_reporting = false
+enable_rtt = true
+logging_edit = false
+logging_delete = false
+home_guild = -1
+logs_channel = -1
+reports_channel = -1
+moderator_role = -1
+
+[bridge]
+allow_nsfw_rooms = false # Strongly recommended to be kept false for public instances.
+use_multicore = true
+enable_exp = false
+exp_cooldown = 30
+existence_wait = 0
+enable_emoji_tags = false
+enable_global_emojis = true
+enable_ctx_commands = true
+enable_rotating_status = true
+enable_seasonal_status = true # Rotating status must be enabled for this to have any effect.
+custom_status_messages = [] # example: [["custom", "just living life"], ["playing", "with messages"]]
+enable_safety_alerts = false
+safe_filetypes = true
+suppress_filesize_warning = false
+global_filesize_limit = 0 # This will be used if it's lower than the platform's filesize limit and vice versa. Set to 0 to disable.
+permanent_invites = false
+enable_private_rooms = false
+private_rooms_mod_access = true # Disable this if you don't want moderators to access Private Rooms.
+private_rooms_limit = 0 # Limits total Private Rooms that can be created by a server
+private_rooms_connections_limit = 0 # Limits total Private Rooms that can be connected to by a server
+main_room = "main"
+alerts_room = "alerts"
+
+[legal]
+terms_url = "" # Add a link to your Terms of Service document here
+privacy_url = "" # Add a link to your Privacy Policy document here
+guidelines_url = "" # Add a link to your guidelines/rules document here

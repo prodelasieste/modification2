@@ -1,0 +1,11 @@
+[Additional licensing information]
+Unifier uses third-party software licensed under different licenses.
+
+- For subprograms used in Unifier, both unmodified and modified, we have
+  listed the original works' licenses right below the copyright notice for
+  each program file.
+- For third-party libraries vendored by Unifier (i.e. installed as part of
+  Unifier installation), we've included attribution in the /about command.
+- For third-party libraries vendored by third-party libraries vendored by
+  Unifier, we have not included attribution for these. Please refer to the
+  libraries's licencing information instead.

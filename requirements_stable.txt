@@ -1,0 +1,17 @@
+nextcord>=3.0.0
+aiofiles
+py-cpuinfo
+compress_json
+python-dotenv
+requests
+emoji
+discord-emoji
+pycryptodome
+orjson
+tomli-w
+setuptools
+aiomultiprocess
+better_profanity
+zstandard
+jellyfish
+tld
