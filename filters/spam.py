@@ -17,8 +17,10 @@ suspected = [
     ['dm', 'private', 'mega', 'links', 'adult'], # Mega links scam 2
     ['get started by asking (how)', 't.me'], # Investment scam (Telegram edition)
     ['get started by asking (how)', '+1'], # Investment scam (Whatsapp edition)
+    ['first', 'people', 'earn', '(how)'], # More stricter spam filter
     ['only interested people should', 't.me'], # Investment scam (Telegram edition 2)
     ['only interested people should', '+1'], # Investment scam (Whatsapp edition 2)
+    ['only interested people should', 'telegram'], # Investment scam (Telegram edition 3)
     ['gift', '[steamcommunity.com'], # Steam gift card scam
     ['gift', '[steampowered.com'], # Steam gift card scam 2
     ['@everyone', '@everyone'], # Mass ping filter
@@ -28,6 +30,7 @@ suspected = [
     ['hack', 'roblox'], # Roblox exploits scam 2
     ['exploit', 'roblox'], # Roblox exploits scam 3
     ['uttp', 'uttp'], # UTTP raiders filter (ew.)
+    ['cdn.discordapp.com', 'cdn.discordapp.com', '@everyone'] # Attachments spam
 ]
 
 # Common spam/phishing content (case sensitive)

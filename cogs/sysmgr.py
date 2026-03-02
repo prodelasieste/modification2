@@ -1801,13 +1801,17 @@ class SysManager(commands.Cog, name=':wrench: System Manager'):
                 embed.colour = self.bot.colors.error
                 await msg.edit(embed=embed)
                 return
-except Exception as e:
-            import traceback
-            error_trace = traceback.format_exc()
-            
-            embed.title = f'{self.bot.ui_emojis.error} Vraie erreur d\'installation'
-            # On affiche les 1000 derniers caractères de l'erreur Python/Git
-            embed.description = f"Le bot n'a pas pu télécharger ou lire le repo. Voici pourquoi :\n```py\n{error_trace[-1000:]}\n```"
+        except:
+            try:
+                await self.bot.loop.run_in_executor(None, lambda: status(os.system('git --version')))
+            except:
+                embed.title = f'{self.bot.ui_emojis.error} {selector.get("failed")}'
+                embed.description = selector.rawget("git","commons.navigation")
+                embed.colour = self.bot.colors.error
+                return await msg.edit(embed=embed)
+
+            embed.title = f'{self.bot.ui_emojis.error} {selector.get("failed")}'
+            embed.description = selector.get('invalid_repo')
             embed.colour = self.bot.colors.error
             return await msg.edit(embed=embed)
 
